@@ -5,6 +5,7 @@
   <title>My Little Confession</title>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
   <style>
+    /* [Your original styles remain unchanged] */
     body {
       margin: 0;
       padding: 0;
@@ -123,8 +124,8 @@
   <button class="music-toggle" onclick="toggleMusic()" id="musicBtn">Pause Music</button>
 </div>
 
-<audio id="bg-music" autoplay loop>
-  <source src="c:\Users\Acer\Downloads\songbali.mp3" type="audio/mp3">
+<audio id="bg-music" loop>
+  <source src="songbali.mp3" type="audio/mp3">
   Your browser does not support audio.
 </audio>
 
@@ -149,6 +150,7 @@
   function openLetter() {
     document.getElementById('envelope').style.display = 'none';
     document.getElementById('confession').style.display = 'flex';
+    music.play(); // 👈 start music after click
     showNextMessage();
   }
 
